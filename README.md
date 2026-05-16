@@ -134,6 +134,9 @@ Vamos aplicar o tema e as configurações de fonte e atalhos no seu Windows Term
     "themes": []
 }
 
+```
+
+
 Passo 2: Liberar a execução de scripts no PowerShell
 Por padrão, o Windows bloqueia a execução de scripts personalizados. Abra o seu PowerShell como Administrador e rode o comando abaixo:
 
@@ -146,3 +149,5 @@ Agora, você precisa criar o arquivo de configuração do seu terminal. Abra um 
 
 PowerShell
 if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
+
+
