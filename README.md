@@ -133,3 +133,16 @@ Vamos aplicar o tema e as configurações de fonte e atalhos no seu Windows Term
     ],
     "themes": []
 }
+
+Passo 2: Liberar a execução de scripts no PowerShell
+Por padrão, o Windows bloqueia a execução de scripts personalizados. Abra o seu PowerShell como Administrador e rode o comando abaixo:
+
+PowerShell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Pressione S (ou Y) quando for solicitado para confirmar.
+
+Passo 3: Criar o arquivo de Perfil do PowerShell
+Agora, você precisa criar o arquivo de configuração do seu terminal. Abra um PowerShell normal (sem ser administrador) e rode:
+
+PowerShell
+if (!(Test-Path -Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
